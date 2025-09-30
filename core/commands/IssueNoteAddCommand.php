@@ -263,7 +263,8 @@ class IssueNoteAddCommand extends Command {
 		# between 'bug_submit_status' and 'bug_feedback_status'. It assumes you only
 		# have one feedback, assigned and submitted status.
 		if( config_get( 'reassign_on_feedback' ) &&
-			$this->issue->status === config_get( 'bug_feedback_status' ) &&
+			($this->issue->status === config_get( 'bug_feedback_status' )
+			|| $this->issue->status === config_get( 'bug_pending_status' )) &&
 			$this->issue->handler_id !== $this->reporterId &&
 			$this->issue->reporter_id === $this->reporterId ) {
 			if( $this->issue->handler_id !== NO_USER ) {
