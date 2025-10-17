@@ -20,6 +20,7 @@ $g_crypto_master_salt       = '7hTkuF6jZsN+AWsjhk/DVg5deGjG0aCT1ioM6VLDaJE=';
 $g_reauthentication_expiry  = 60*60*24;
 $g_bug_pending_status       = PENDING;
 $g_public_config_names[]    = 'bug_pending_status';
+$g_antispam_max_event_count = 100;
 
 $g_log_level                = LOG_EMAIL | LOG_EMAIL_RECIPIENT;
 
