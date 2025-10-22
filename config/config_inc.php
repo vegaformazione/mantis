@@ -22,8 +22,6 @@ $g_bug_pending_status       = PENDING;
 $g_public_config_names[]    = 'bug_pending_status';
 $g_antispam_max_event_count = 100;
 
-$g_log_level                = LOG_EMAIL | LOG_EMAIL_RECIPIENT;
-
 $g_phpMailer_method	        = PHPMAILER_METHOD_SMTP;          # or PHPMAILER_METHOD_SMTP, PHPMAILER_METHOD_SENDMAIL
 $g_smtp_host		        = 'smtp.gmail.com';               # used with PHPMAILER_METHOD_SMTP
 $g_smtp_username	        = 'sergiopingenti81@gmail.com';   # used with PHPMAILER_METHOD_SMTP
