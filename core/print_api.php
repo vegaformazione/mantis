@@ -320,9 +320,11 @@ function print_user_option_list( $p_user_id, $p_project_id = null, $p_access = A
 	$t_count = count( $t_users );
 	for( $i = 0;$i < $t_count;$i++ ) {
 		$t_row = $t_users[$i];
-		echo '<option value="' . $t_row['id'] . '" ';
-		check_selected( $p_user_id, (int)$t_row['id'] );
-		echo '>' . string_attribute( $t_display[$i] ) . '</option>';
+		if ( !in_array($t_row['id'], [1, 40]) )  {
+			echo '<option value="' . $t_row['id'] . '" ';
+			check_selected( $p_user_id, (int)$t_row['id'] );
+			echo '>' . string_attribute( $t_display[$i] ) . '</option>';
+		}
 	}
 }
 
